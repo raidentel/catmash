@@ -1,0 +1,56 @@
+.thumb1 { 
+    object-fit: cover;
+  width:230px;
+  height:230px;
+  }
+
+
+  .crop {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+}
+
+.crop img {
+    width: 70px;
+    height: 70px;
+    border-radius: 70%;
+  }
+
+
+  .crop-voted {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.crop-voted img {
+  width: 350px;
+  height: 350px;
+  border-radius: 33%;
+}
+
+.col-1 {
+  width: 100%;
+  opacity: 0.8 !important;
+}
+
+element.style {
+  border: 0px solid #c8c8c8;
+  font-size: 150% !important;
+}
+
+
+  #top-rated > tr > td {
+
+    border:0px solid !important;
+    width:10px;
+    opacity: 0.9;
+    resize:both;
+  }
+
+  .p-table body .ui-table .ui-table-tbody > tr > td {
+    background: inherit;
+    border: 0px solid #c8c8c8 !important;
+}
+    

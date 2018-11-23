@@ -1,0 +1,109 @@
+<header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+    <div id="header" class="nav-collapse">
+        <div class="row clearfix">
+            <div class="col-1">
+
+                <!--Logo-->
+                <div id="logo">
+
+                    <!--Logo that is shown on the banner-->
+                    <!-- <img src="../assets/images/logo.png" id="banner-logo" alt="Landing Page"/> -->
+                    <!--End of Banner Logo-->
+
+                    <!--The Logo that is shown on the sticky Navigation Bar-->
+                    <img src="../assets/images/logo-2.png" id="navigation-logo" alt="Landing Page"/>
+                    <!--End of Navigation Logo-->
+
+                </div>
+                <!--End of Logo-->
+
+                
+
+                  <!--social component-->
+                    <app-social></app-social>
+
+                
+
+                <!--navigation component-->
+               <app-navigation></app-navigation>
+
+                <div id="nav-trigger"><span></span></div>
+                <nav id="nav-mobile"></nav>
+
+            </div>
+        </div>
+    </div><!--End of Header-->
+
+    <!--Banner Content-->
+    <div id="banner-content" class="row clearfix">
+           
+
+
+        
+
+
+                
+
+            <div class="section-heading">
+                <h1>Catmash</h1>
+               <!--content component-->
+                <h2></h2>
+            
+
+
+            </div>
+
+            <div class="col-2">
+                   
+                    <div fxLayout="row">
+                            <div *ngFor ="let cat of catsForVote" >
+                                <div id="selected" class="crop-voted" (click)="voteOnTheCat(cat)">
+                                    <img src={{cat.url}}  />
+                                </div>
+                            </div>
+                       
+                    </div>
+               
+                
+                   
+
+            </div>
+
+            <div class="col-1">
+
+            <p-table id="top-rated" [value]="cats" [paginator]="true" [rows]="4">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th style="border: 0px solid #c8c8c8; font-size: 150%">Chats mignons</th>
+                            <th style="border: 0px solid #c8c8c8; font-size: 150%">Score</th>
+                            
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-cat>
+                        <tr>
+                            <td align="center" style="border: 0px solid transparent"><div class="crop">
+                                    <img src={{cat.url}}>
+                                </div></td>
+                            <td align="center" style="border: 0px solid #c8c8c8; font-size: 150%; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color:black;font-weight:bold;">{{cat.score}}</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+
+            
+
+            
+
+
+                
+        </div>
+
+
+        
+
+
+    </div><!--End of Row-->
+
+    
+
+    
+</header>
